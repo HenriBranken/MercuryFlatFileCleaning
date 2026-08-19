@@ -1,0 +1,92 @@
+# Clean MercuryMonthlyEvents
+
+# Parameters:
+DATASET_NAME = MercuryMonthlyEvents
+REPORT_NAME = MercuryMonthlyEvents
+INPUT_EXT = .txt
+OUTPUT_EXT = .csv
+DELIMITER = ;
+ENCODING = utf-8
+DATE_COLUMN = MonthDate
+DATE_FORMAT = %Y-%m-%d %H:%M:%S.%f
+
+LS_COLS = [
+	MonthDate	CompanyCode	CompanyName	Country	Operation	EventType	SearchTerm	DeviceCategory	ContentType	ContentTitle	DownloadLanguage	Theme	Route	UniqueUsers	DateRange
+]
+
+LS_STR_COLS = [
+	CompanyCode	CompanyName	Country	Operation	EventType	SearchTerm	DeviceCategory	ContentType	ContentTitle	DownloadLanguage	Theme	Route	DateRange
+]
+
+LS_INT_COLS = [
+	UniqueUsers
+]
+
+SORT_COLS = [
+	MonthDate	CompanyCode	CompanyName	Country	Operation	EventType
+]
+
+
+[x] Ingest the `{DATASET_NAME}_yyyy-mm-dd{INPUT_EXT}` data into a Pandas Dataframe.
+    The file uses a "{DELIMITER}" as the field delimiter.
+    Read with "{ENCODING}" encoding.
+
+[x] Rename Columns as follows:
+    yearMonth -> MonthDate
+
+[x] Locate the input file `{DATASET_NAME}_yyyy-mm-dd{INPUT_EXT}`
+
+[x] Derive the `month-tag` from the filename, and subtract 1 month from it.  Store the result inside `year`, `month` variables respectively.
+    Concatenate `year` and `month` into a single string: `month_tag` = <year><month>.
+
+[x] The Data Columns need to be arranged in the order specified in LS_COLS. Drop any other columns that are not contained in `LS_COLS`.
+
+[x] Convert `{DATE_COLUMN}` entries to the following format: ("{DATE_FORMAT}").str[:-3]
+	Example output for this would look like:  "2026-07-13 00:00:00.000"
+
+[x] Trim any redundant white space (trailing space, leading space, double spaces, tabs), .str.strip(), in the string fields specified in LS_STR_COLS.
+Also collapse any Double white space into a single white space for the fields specified in LS_STR_COLS.
+```
+for col in LS_STR_COLS:
+    df[col] = df[col].str.strip().str.replace(r"\s+", " ", regex=True)
+```
+
+[x] Remove any rows that are completely blank (evaluated against the LS_COLS columns).
+
+[x] Remove any rows where the `{DATE_COLUMN}` entry is blank/missing/NULL.
+
+[x] Cast the columns specified in LS_INT_COLS to integer format.
+
+[x] Sort the rows in Ascending (or A->Z) order based on columns specified in `SORT_COLS`.
+
+
+# Save the dataset
+Look at the filename of the input data.
+
+Save and store the dataset as: {DATASET_NAME}_<month_tag>_cleaned{OUTPUT_EXT}
+So, as an example, the input of {DATASET_NAME}_2026-08-02{INPUT_EXT} would lead to the output: {DATASET_NAME}_202607_cleaned{OUTPUT_EXT}.
+Use "{DELIMITER}" as the field delimiter.
+
+[x] Write a Summary Report similar to the following Python:
+report_lines = [
+    f"Input file: {{input_path.name}}",
+    f"Raw row count: {{len(df_raw)}}",
+    f"Raw duplicate rows: {{int(df_raw.duplicated().sum())}}",
+    "=======================================================================",
+    f"Month tag: {{month_tag}}",
+    f"Blank/missing-key rows dropped: {{len(df_raw) - len(df_cleaned)}}",
+    "=======================================================================",
+    f"Cleaned row count: {{len(df_cleaned)}}",
+    f"Cleaned duplicate rows: {{int(df_cleaned.duplicated().sum())}}",
+    f"Output file: {{output_path.name}}",
+]
+report_text = "\n".join(report_lines) + "\n"
+report_text += "\n\n\n" + df_cleaned.describe().to_string() + "\n"
+
+reports_dir = NOTEBOOK_DIR / "reports"
+reports_dir.mkdir(parents=True, exist_ok=True)
+report_path = reports_dir / f"{REPORT_NAME}_{{month_tag}}_report.txt"
+report_path.write_text(report_text, encoding="{ENCODING}")
+
+print(report_text)
+print(f"Report written -> {{report_path}}")

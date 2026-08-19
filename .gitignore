@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual environment
+.venv/
+
+# Generated data (recreated by running the pipeline) - keep the folders, ignore contents
+input/*
+output/*
+reports/*
+!input/.gitkeep
+!output/.gitkeep
+!reports/.gitkeep
+
+# Claude Code
+.claude/
+CLAUDE.md
