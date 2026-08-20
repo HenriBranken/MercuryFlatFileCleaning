@@ -15,6 +15,11 @@ reports/*
 !output/.gitkeep
 !reports/.gitkeep
 
+# to_upload folder: keep the folder (via .gitkeep), ignore its generated CSVs
+!output/to_upload/
+output/to_upload/*.csv
+!output/to_upload/.gitkeep
+
 # Claude Code
 .claude/
 CLAUDE.md
