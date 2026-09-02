@@ -1,0 +1,237 @@
+Date;CompanyCode;CompanyName;Country;Operation;Sessions;UniqueUsers;DateRange
+2026-07-01 00:00:00.000;ABPUK;ABP - UK;United Kingdom;Lyra UK & Ireland Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;BDMY;Becton Dickinson;Malta;Lyra Health Malaysia Sdn Bhd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;BEIERSDORF;BEIERSDORF;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;DABWATERHUBTEST;DAB Water (Test Preview);Italy;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;DATALOGIC;Datalogic;Malta;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;DOMO;DOMO;United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;GENESYS;Genesys;United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;5;3;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);Spain;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;ICASTESTOPS;Unmapped;South Africa;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;ISENTIA;Isentia Pte Limited;Australia;Lyra Health International Ltd;3;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;JABIL;Jabil;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;KOHLER;Kohler;United Kingdom;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;LAPACASTERLLOYD;Acaster Lloyd;United Kingdom;Lyra UK & Ireland Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;LYRAGROUP;Lyra International;Hungary;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;LYRAMENATEST;ICAS MENA (Test Preview);United Arab Emirates;Lyra Health International Ltd (DMCC) Branch (MENA);1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;MOO002;Moore Cape Town Inc;South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;QBE;QBE Insurance;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;SAP;SAP;Italy;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;TETRAPAK;Tetrapak;Netherlands;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;Unmapped;Unmapped;United Kingdom;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;WECARE;DS Smith;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-01 00:00:00.000;WHI002;Whitehead Scientific Pty Ltd;South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;ADV;ABP - Advanced Proteins;United Kingdom;Lyra UK & Ireland Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;AVANTOR;Avantor;Belgium;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;EDWARDSLIFESCIENCES;Edwards Lifesciences;Czechia;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;FERRERO;Ferrero;India;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;HM;H&M Group;Germany;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);South Africa;Lyra Southern Africa Pty Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;3;3;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);Spain;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;ICASXMERCURY;ICAS Mercury;Spain;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;IRA001;IRANTI NPC;South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;ISENTIA;Isentia Pte Limited;Australia;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;LYRAGROUP;Lyra International;Hungary;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;MERCK;Merck Group;Germany;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;MOT005;Motor Industry Fund Administrators;South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;NET001;Netcare;South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;PROCTERGAMBLE;Procter & Gamble;Austria;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;SAP;SAP;Netherlands;Lyra Health International Ltd;2;2;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;TMD;TMD Friction;United Kingdom;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;Unmapped;Unmapped;United Kingdom;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;VTTIHEALTH;VTTI;Netherlands;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;WHSMITH;WH Smith;Ireland;Lyra;1;1;2026-07-01 - 2026-07-31
+2026-07-02 00:00:00.000;WHSMITH;WH Smith;United Kingdom;Lyra;3;3;2026-07-01 - 2026-07-31
+2026-07-03 00:00:00.000;CGI;CGI;Canada;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-03 00:00:00.000;COATS;Coats Group;France;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-03 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-03 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-03 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;3;2;2026-07-01 - 2026-07-31
+2026-07-03 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-03 00:00:00.000;REDSLIM;Redslim;Germany;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-05 00:00:00.000;Unmapped;Unmapped;United Kingdom;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;BDMY;Becton Dickinson;Malta;Lyra Health Malaysia Sdn Bhd;1;1;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;BRIDGESTONE;Bridgestone;Belgium;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;CGI;CGI;Canada;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;CORTEVA;Corteva;Poland;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;DATALOGIC;Datalogic;Malta;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;EIPC;EIPC;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;EVEREST;Everest;United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;2;2;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;2;2;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;LYRAGROUP;Lyra International;Hungary;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;NEWMONT;Newmont;United States;Lyra Health International Ltd;2;2;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;REDSLIM;Redslim;Germany;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;TMD;TMD Friction;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-06 00:00:00.000;Unmapped;Unmapped;United Kingdom;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-07 00:00:00.000;BAS001;BASF Holdings;South Africa;Lyra Southern Africa Pty Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-07 00:00:00.000;BMKGENETICS;Benchmark Genetics;United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-07 00:00:00.000;EIPC;EIPC;United Kingdom;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-07 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);South Africa;Lyra Southern Africa Pty Ltd;2;2;2026-07-01 - 2026-07-31
+2026-07-07 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-07 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;2;2;2026-07-01 - 2026-07-31
+2026-07-07 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-07 00:00:00.000;LYRAGROUP;Lyra International;Hungary;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-07 00:00:00.000;RANK;Rank Leisure;Mauritius;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-07 00:00:00.000;SBDHUB22;Stanley Black & Decker;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-07 00:00:00.000;Unmapped;Unmapped;South Africa;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;ABPIE;ABP - Ireland;Ireland;Lyra UK & Ireland Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;BENCHMARK;Benchmark Holdings;Belgium;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;CXP001;Cathay Pacific;Canada;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;DLA001;DLA Piper;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;EIPC;EIPC;United Kingdom;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;4;2;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;2;2;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;NEWMONT;Newmont;Australia;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;NEWMONT;Newmont;Ghana;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;PEPSICO;Pepsico;United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;RELX;RELX;Philippines;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;TELESPAZIO;TELESPAZIO;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-08 00:00:00.000;TETRAPAK;Tetrapak;Netherlands;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-09 00:00:00.000;ABPIE;ABP - Ireland;Ireland;Lyra UK & Ireland Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-09 00:00:00.000;BENCHMARK;Benchmark Holdings;Belgium;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-09 00:00:00.000;CGI;CGI;Canada;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-09 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-09 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);Indonesia;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-09 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);Malaysia;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-09 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United States;Lyra Health International Ltd;2;2;2026-07-01 - 2026-07-31
+2026-07-09 00:00:00.000;MCBRIDE;McBride;Luxembourg;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-09 00:00:00.000;NEWMONT;Newmont;United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-09 00:00:00.000;PROQRNL;ProQR;Netherlands;Lyra Netherlands BV;1;1;2026-07-01 - 2026-07-31
+2026-07-09 00:00:00.000;RSGROUP;RS Group PLC;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-09 00:00:00.000;SAP;SAP;Germany;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-09 00:00:00.000;Unmapped;Unmapped;United Kingdom;Unmapped;3;2;2026-07-01 - 2026-07-31
+2026-07-10 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;3;1;2026-07-01 - 2026-07-31
+2026-07-10 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-10 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-10 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-10 00:00:00.000;LYRAOPSTEST;Lyra Clinical Ops;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-10 00:00:00.000;MCBRIDE;McBride;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-10 00:00:00.000;Unmapped;Unmapped;South Africa;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-13 00:00:00.000;ADV;ABP - Advanced Proteins;United Kingdom;Lyra UK & Ireland Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-13 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-13 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-13 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;2;2;2026-07-01 - 2026-07-31
+2026-07-13 00:00:00.000;IDHPRODTEST;IDH Prod Test Company;United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-13 00:00:00.000;IRA001;IRANTI NPC;South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-13 00:00:00.000;RSGROUP;RS Group PLC;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-13 00:00:00.000;SBDHUB22;Stanley Black & Decker;Mexico;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-13 00:00:00.000;VTTIHEALTH;VTTI;Netherlands;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-14 00:00:00.000;ASAHI;ASAHI;Italy;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-14 00:00:00.000;FERRERO;Ferrero;United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-14 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-14 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;3;3;2026-07-01 - 2026-07-31
+2026-07-14 00:00:00.000;IDHPRODTEST;IDH Prod Test Company;United States;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-14 00:00:00.000;MCBRIDE;McBride;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-14 00:00:00.000;RSGROUP;RS Group PLC;South Africa;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-14 00:00:00.000;SAP;SAP;Australia;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-14 00:00:00.000;Unmapped;Unmapped;South Africa;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-15 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-15 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-15 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-15 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-15 00:00:00.000;IDHPRODTEST;IDH Prod Test Company;United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-15 00:00:00.000;JABIL;Jabil;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-15 00:00:00.000;RANK;Rank Leisure;Malta;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-15 00:00:00.000;RELX;RELX;Philippines;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-15 00:00:00.000;RSGROUP;RS Group PLC;South Africa;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-15 00:00:00.000;TETRAPAK;Tetrapak;Netherlands;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-15 00:00:00.000;Unmapped;Unmapped;United Kingdom;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-15 00:00:00.000;VOd001;Unmapped;South Africa;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-15 00:00:00.000;ZOETIS;Zoetis;Ireland;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-16 00:00:00.000;BLACKSWAN;Black Swan;Hungary;Lyra Health Hungary Kft;1;1;2026-07-01 - 2026-07-31
+2026-07-16 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-16 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-16 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-16 00:00:00.000;QBE;QBE Insurance;Sweden;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-16 00:00:00.000;VOd001;Unmapped;South Africa;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-17 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-17 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-17 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-17 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-17 00:00:00.000;VOd001;Unmapped;South Africa;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-20 00:00:00.000;EASYJETHUB22;easyJet;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-20 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-20 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-20 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-20 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-20 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-20 00:00:00.000;ROCHE;ROCHE;Philippines;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-21 00:00:00.000;CTE001;Cirtech Electronics (Pty) Ltd;South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-21 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;10;1;2026-07-01 - 2026-07-31
+2026-07-21 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;3;2;2026-07-01 - 2026-07-31
+2026-07-21 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-21 00:00:00.000;KOHLER;Kohler;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-21 00:00:00.000;SIEGWERK;Siegwerk;United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-22 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-22 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-22 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-22 00:00:00.000;ICASXMERCURY;ICAS Mercury;Luxembourg;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-22 00:00:00.000;JABIL;Jabil;Poland;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-22 00:00:00.000;LYRAOPSTEST;Lyra Clinical Ops;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-22 00:00:00.000;RELX;RELX;Philippines;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-22 00:00:00.000;SAP;SAP;Germany;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-22 00:00:00.000;SBDHUB22;Stanley Black & Decker;Mexico;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-22 00:00:00.000;SYLVAMO;Sylvamo;Poland;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-23 00:00:00.000;CGI;CGI;Canada;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-23 00:00:00.000;HUBTEST;icashubtestclient (Test Preview);South Africa;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-23 00:00:00.000;ICASMARKETINGTEST;ICAS Marketing (Test Preview);South Africa;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-23 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-23 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-23 00:00:00.000;SWAROVSKIHUB22;Swarovski;Germany;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-23 00:00:00.000;SYLVAMO;Sylvamo;Poland;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-24 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-24 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-27 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-27 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-27 00:00:00.000;IDHPRODTEST;IDH Prod Test Company;United Kingdom;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-27 00:00:00.000;JABIL;Jabil;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-27 00:00:00.000;JOHNSONJOHNSON;Johnson & Johnson;Korea (South);Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-27 00:00:00.000;SAP;SAP;Germany;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-27 00:00:00.000;SBDHUB22;Stanley Black & Decker;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-27 00:00:00.000;Unmapped;Unmapped;United Kingdom;Unmapped;2;1;2026-07-01 - 2026-07-31
+2026-07-28 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-28 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;3;3;2026-07-01 - 2026-07-31
+2026-07-28 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-28 00:00:00.000;JCI;JCI;Singapore;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-28 00:00:00.000;KINGHUB22;King;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-28 00:00:00.000;LYRAHUBTEST;Lyra (Test Preview);United States;Lyra;1;1;2026-07-01 - 2026-07-31
+2026-07-28 00:00:00.000;LYRAOPSTEST;Lyra Clinical Ops;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-28 00:00:00.000;ML001;M Line Group Pty Ltd;South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-28 00:00:00.000;TMD;TMD Friction;United Kingdom;Lyra Health International Ltd;2;2;2026-07-01 - 2026-07-31
+2026-07-28 00:00:00.000;Unmapped;Unmapped;Botswana;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-28 00:00:00.000;Unmapped;Unmapped;South Africa;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-29 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);South Africa;Lyra Southern Africa Pty Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-29 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;5;4;2026-07-01 - 2026-07-31
+2026-07-29 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-29 00:00:00.000;JABIL;Jabil;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-29 00:00:00.000;JCI;JCI;China;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-29 00:00:00.000;LYRAHUBTEST;Lyra (Test Preview);United States;Lyra;2;2;2026-07-01 - 2026-07-31
+2026-07-29 00:00:00.000;MAR007;Marllyn Chemicals PTY Ltd;South Africa;Lyra Southern Africa Pty Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-29 00:00:00.000;SAP;SAP;Germany;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-29 00:00:00.000;SBDHUB22;Stanley Black & Decker;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-29 00:00:00.000;Unmapped;Unmapped;Botswana;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-30 00:00:00.000;GRUNENTHAL;Grunenthal;Belgium;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-30 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);South Africa;Lyra Health International Ltd;4;3;2026-07-01 - 2026-07-31
+2026-07-30 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);Spain;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-30 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United Kingdom;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
+2026-07-30 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-30 00:00:00.000;ICASTESTINDIA;ICAS India (Test Preview);India;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-30 00:00:00.000;LYRAHUBTEST;Lyra (Test Preview);United States;Lyra;1;1;2026-07-01 - 2026-07-31
+2026-07-30 00:00:00.000;RELX;RELX;Philippines;Lyra Health International Ltd;2;2;2026-07-01 - 2026-07-31
+2026-07-30 00:00:00.000;Unmapped;Unmapped;South Africa;Unmapped;1;1;2026-07-01 - 2026-07-31
+2026-07-30 00:00:00.000;Unmapped;Unmapped;United Kingdom;Unmapped;3;1;2026-07-01 - 2026-07-31
+2026-07-31 00:00:00.000;ICA001;iCAS;South Africa;Lyra Southern Africa Pty Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-31 00:00:00.000;ICASSATEST;ICAS South Africa (Test Preview);United Kingdom;Lyra Southern Africa Pty Ltd;3;1;2026-07-01 - 2026-07-31
+2026-07-31 00:00:00.000;ICASTESTCS;ICAS Client Services (Test Preview);United States;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-31 00:00:00.000;JCI;JCI;Austria;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-31 00:00:00.000;JCI;JCI;United Kingdom;Lyra Health International Ltd;1;1;2026-07-01 - 2026-07-31
+2026-07-31 00:00:00.000;NEWMONT;Newmont;Australia;Lyra Health International Ltd;2;1;2026-07-01 - 2026-07-31
