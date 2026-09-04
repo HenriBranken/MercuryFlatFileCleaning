@@ -67,14 +67,20 @@ def write_report(
         f"Cleaned duplicate rows: {int(df_cleaned.duplicated().sum())}",
         f"Output file: {output_path.name}",
         "=======================================================================",
-        "Numeric field sums (BEFORE_SUM: after blank/missing-key rows dropped; "
-        "AFTER_SUM: after cleaning and deduping):",
+        "Numeric field sums, before dedup (post blank-drop) vs after dedup:",
     ]
+    name_width = max(len(col) for col in sums_before_collapse) + 2
+    all_match = True
     for col in sums_before_collapse:
         before_sum = sums_before_collapse[col]
         after_sum = sums_after_collapse[col]
-        match = "match" if before_sum == after_sum else "MISMATCH"
-        report_lines.append(f"  {col}: BEFORE_SUM={before_sum}, AFTER_SUM={after_sum} ({match})")
+        is_match = before_sum == after_sum
+        all_match = all_match and is_match
+        verdict = "MATCH" if is_match else "MISMATCH"
+        report_lines.append(
+            f"  {col:<{name_width}}before={str(before_sum):<16}after={str(after_sum):<16}{verdict}"
+        )
+    report_lines.append(f"All numeric sums match: {all_match}")
     report_text = "\n".join(report_lines) + "\n"
     report_text += "\n\n\n" + df_cleaned.describe().to_string() + "\n"
 
