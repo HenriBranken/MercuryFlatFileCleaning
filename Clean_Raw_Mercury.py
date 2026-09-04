@@ -101,6 +101,11 @@ def read_semicolon_csv_protecting_backslashes(path: Path) -> pd.DataFrame:
     )
 
 
+def blank_out_dash_cells(df: pd.DataFrame) -> pd.DataFrame:
+    """Replace any cell whose value is exactly "-" (ignoring surrounding whitespace) with blank."""
+    return df.apply(lambda col: col.mask(col.str.strip() == "-", ""))
+
+
 def collapse_duplicate_rows(
     df: pd.DataFrame, ls_cols: list[str], sum_cols: list[str], sort_cols: list[str]
 ) -> pd.DataFrame:
@@ -192,7 +197,7 @@ def clean_de(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
         df[col] = df[col].str.strip().str.replace(r"\s+", " ", regex=True)
 
     for col in LS_INT_COLS_DE:
-        df[col] = df[col].astype(int)
+        df[col] = df[col].replace("", "0").astype(int)
 
     df = df.sort_values(by=SORT_COLS_DE, ascending=True).reset_index(drop=True)
 
@@ -230,7 +235,7 @@ def clean_du(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
         df[col] = df[col].str.strip().str.replace(r"\s+", " ", regex=True)
 
     for col in LS_INT_COLS_DU:
-        df[col] = df[col].astype(int)
+        df[col] = df[col].replace("", "0").astype(int)
 
     df = df.sort_values(by=SORT_COLS_DU, ascending=True).reset_index(drop=True)
 
@@ -280,7 +285,7 @@ def clean_me(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
         df[col] = df[col].str.strip().str.replace(r"\s+", " ", regex=True)
 
     for col in LS_INT_COLS_ME:
-        df[col] = df[col].astype(int)
+        df[col] = df[col].replace("", "0").astype(int)
 
     df = df.sort_values(by=SORT_COLS_ME, ascending=True).reset_index(drop=True)
 
@@ -321,7 +326,7 @@ def clean_mu(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
         df[col] = df[col].str.strip().str.replace(r"\s+", " ", regex=True)
 
     for col in LS_INT_COLS_MU:
-        df[col] = df[col].astype(int)
+        df[col] = df[col].replace("", "0").astype(int)
 
     df = df.sort_values(by=SORT_COLS_MU, ascending=True).reset_index(drop=True)
 
@@ -339,6 +344,7 @@ def main() -> None:
     month_tag_de = month_tag_from_filename(input_path_de, PREFIX_DE, FILENAME_RE_DE)
 
     df_raw_de = read_semicolon_csv_protecting_backslashes(input_path_de)
+    df_raw_de = blank_out_dash_cells(df_raw_de)
     df_cleaned_de, dropped_blank_de = clean_de(df_raw_de)
     rows_before_collapse_de = len(df_cleaned_de)
     sums_before_collapse_de = sum_numeric_cols(df_cleaned_de, LS_INT_COLS_DE)
@@ -376,6 +382,7 @@ def main() -> None:
     month_tag_du = month_tag_from_filename(input_path_du, PREFIX_DU, FILENAME_RE_DU)
 
     df_raw_du = pd.read_csv(input_path_du, sep=";", dtype=str, keep_default_na=False, encoding="utf-8")
+    df_raw_du = blank_out_dash_cells(df_raw_du)
     df_cleaned_du, dropped_blank_du = clean_du(df_raw_du)
     rows_before_collapse_du = len(df_cleaned_du)
     sums_before_collapse_du = sum_numeric_cols(df_cleaned_du, LS_INT_COLS_DU)
@@ -413,6 +420,7 @@ def main() -> None:
     month_tag_me = month_tag_from_filename(input_path_me, PREFIX_ME, FILENAME_RE_ME)
 
     df_raw_me = read_semicolon_csv_protecting_backslashes(input_path_me)
+    df_raw_me = blank_out_dash_cells(df_raw_me)
     df_cleaned_me, dropped_blank_me = clean_me(df_raw_me)
     rows_before_collapse_me = len(df_cleaned_me)
     sums_before_collapse_me = sum_numeric_cols(df_cleaned_me, LS_INT_COLS_ME)
@@ -450,6 +458,7 @@ def main() -> None:
     month_tag_mu = month_tag_from_filename(input_path_mu, PREFIX_MU, FILENAME_RE_MU)
 
     df_raw_mu = pd.read_csv(input_path_mu, sep=";", dtype=str, keep_default_na=False, encoding="utf-8")
+    df_raw_mu = blank_out_dash_cells(df_raw_mu)
     df_cleaned_mu, dropped_blank_mu = clean_mu(df_raw_mu)
     rows_before_collapse_mu = len(df_cleaned_mu)
     sums_before_collapse_mu = sum_numeric_cols(df_cleaned_mu, LS_INT_COLS_MU)
