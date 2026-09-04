@@ -36,6 +36,11 @@ def month_tag_from_filename(path: Path, prefix: str, filename_re: re.Pattern) ->
     return f"{year}{month:02d}"
 
 
+def sum_numeric_cols(df: pd.DataFrame, sum_cols: list[str]) -> dict[str, int]:
+    """Return {col: sum} for each of df's numeric sum_cols."""
+    return {col: int(df[col].sum()) for col in sum_cols}
+
+
 def write_report(
     reports_dir: Path,
     prefix: str,
@@ -45,6 +50,8 @@ def write_report(
     df_cleaned: pd.DataFrame,
     output_path: Path,
     rows_before_collapse: int,
+    sums_before_collapse: dict[str, int],
+    sums_after_collapse: dict[str, int],
 ) -> tuple[Path, str]:
     """Write the cleaning summary report and return (path, text)."""
     report_lines = [
@@ -59,7 +66,15 @@ def write_report(
         f"Cleaned row count: {len(df_cleaned)}",
         f"Cleaned duplicate rows: {int(df_cleaned.duplicated().sum())}",
         f"Output file: {output_path.name}",
+        "=======================================================================",
+        "Numeric field sums (BEFORE_SUM: after blank/missing-key rows dropped; "
+        "AFTER_SUM: after cleaning and deduping):",
     ]
+    for col in sums_before_collapse:
+        before_sum = sums_before_collapse[col]
+        after_sum = sums_after_collapse[col]
+        match = "match" if before_sum == after_sum else "MISMATCH"
+        report_lines.append(f"  {col}: BEFORE_SUM={before_sum}, AFTER_SUM={after_sum} ({match})")
     report_text = "\n".join(report_lines) + "\n"
     report_text += "\n\n\n" + df_cleaned.describe().to_string() + "\n"
 
@@ -326,8 +341,10 @@ def main() -> None:
     df_raw_de = read_semicolon_csv_protecting_backslashes(input_path_de)
     df_cleaned_de, dropped_blank_de = clean_de(df_raw_de)
     rows_before_collapse_de = len(df_cleaned_de)
+    sums_before_collapse_de = sum_numeric_cols(df_cleaned_de, LS_INT_COLS_DE)
     duplicate_rows_de = extract_duplicate_group_rows(df_cleaned_de, LS_COLS_DE, LS_INT_COLS_DE)
     df_cleaned_de = collapse_duplicate_rows(df_cleaned_de, LS_COLS_DE, LS_INT_COLS_DE, SORT_COLS_DE)
+    sums_after_collapse_de = sum_numeric_cols(df_cleaned_de, LS_INT_COLS_DE)
 
     output_path_de = OUTPUT_DIR / f"{PREFIX_DE}_{month_tag_de}_cleaned.csv"
     df_cleaned_de.to_csv(output_path_de, sep=";", index=False, encoding="utf-8", quoting=csv.QUOTE_MINIMAL)
@@ -347,6 +364,8 @@ def main() -> None:
         df_cleaned=df_cleaned_de,
         output_path=output_path_de,
         rows_before_collapse=rows_before_collapse_de,
+        sums_before_collapse=sums_before_collapse_de,
+        sums_after_collapse=sums_after_collapse_de,
     )
     print(report_text_de)
     print(f"Report written -> {report_path_de}")
@@ -359,8 +378,10 @@ def main() -> None:
     df_raw_du = pd.read_csv(input_path_du, sep=";", dtype=str, keep_default_na=False, encoding="utf-8")
     df_cleaned_du, dropped_blank_du = clean_du(df_raw_du)
     rows_before_collapse_du = len(df_cleaned_du)
+    sums_before_collapse_du = sum_numeric_cols(df_cleaned_du, LS_INT_COLS_DU)
     duplicate_rows_du = extract_duplicate_group_rows(df_cleaned_du, LS_COLS_DU, LS_INT_COLS_DU)
     df_cleaned_du = collapse_duplicate_rows(df_cleaned_du, LS_COLS_DU, LS_INT_COLS_DU, SORT_COLS_DU)
+    sums_after_collapse_du = sum_numeric_cols(df_cleaned_du, LS_INT_COLS_DU)
 
     output_path_du = OUTPUT_DIR / f"{PREFIX_DU}_{month_tag_du}_cleaned.csv"
     df_cleaned_du.to_csv(output_path_du, sep=";", index=False, encoding="utf-8", quoting=csv.QUOTE_MINIMAL)
@@ -380,6 +401,8 @@ def main() -> None:
         df_cleaned=df_cleaned_du,
         output_path=output_path_du,
         rows_before_collapse=rows_before_collapse_du,
+        sums_before_collapse=sums_before_collapse_du,
+        sums_after_collapse=sums_after_collapse_du,
     )
     print(report_text_du)
     print(f"Report written -> {report_path_du}")
@@ -392,8 +415,10 @@ def main() -> None:
     df_raw_me = read_semicolon_csv_protecting_backslashes(input_path_me)
     df_cleaned_me, dropped_blank_me = clean_me(df_raw_me)
     rows_before_collapse_me = len(df_cleaned_me)
+    sums_before_collapse_me = sum_numeric_cols(df_cleaned_me, LS_INT_COLS_ME)
     duplicate_rows_me = extract_duplicate_group_rows(df_cleaned_me, LS_COLS_ME, LS_INT_COLS_ME)
     df_cleaned_me = collapse_duplicate_rows(df_cleaned_me, LS_COLS_ME, LS_INT_COLS_ME, SORT_COLS_ME)
+    sums_after_collapse_me = sum_numeric_cols(df_cleaned_me, LS_INT_COLS_ME)
 
     output_path_me = OUTPUT_DIR / f"{PREFIX_ME}_{month_tag_me}_cleaned.csv"
     df_cleaned_me.to_csv(output_path_me, sep=";", index=False, encoding="utf-8", quoting=csv.QUOTE_MINIMAL)
@@ -413,6 +438,8 @@ def main() -> None:
         df_cleaned=df_cleaned_me,
         output_path=output_path_me,
         rows_before_collapse=rows_before_collapse_me,
+        sums_before_collapse=sums_before_collapse_me,
+        sums_after_collapse=sums_after_collapse_me,
     )
     print(report_text_me)
     print(f"Report written -> {report_path_me}")
@@ -425,8 +452,10 @@ def main() -> None:
     df_raw_mu = pd.read_csv(input_path_mu, sep=";", dtype=str, keep_default_na=False, encoding="utf-8")
     df_cleaned_mu, dropped_blank_mu = clean_mu(df_raw_mu)
     rows_before_collapse_mu = len(df_cleaned_mu)
+    sums_before_collapse_mu = sum_numeric_cols(df_cleaned_mu, LS_INT_COLS_MU)
     duplicate_rows_mu = extract_duplicate_group_rows(df_cleaned_mu, LS_COLS_MU, LS_INT_COLS_MU)
     df_cleaned_mu = collapse_duplicate_rows(df_cleaned_mu, LS_COLS_MU, LS_INT_COLS_MU, SORT_COLS_MU)
+    sums_after_collapse_mu = sum_numeric_cols(df_cleaned_mu, LS_INT_COLS_MU)
 
     output_path_mu = OUTPUT_DIR / f"{PREFIX_MU}_{month_tag_mu}_cleaned.csv"
     df_cleaned_mu.to_csv(output_path_mu, sep=";", index=False, encoding="utf-8", quoting=csv.QUOTE_MINIMAL)
@@ -446,6 +475,8 @@ def main() -> None:
         df_cleaned=df_cleaned_mu,
         output_path=output_path_mu,
         rows_before_collapse=rows_before_collapse_mu,
+        sums_before_collapse=sums_before_collapse_mu,
+        sums_after_collapse=sums_after_collapse_mu,
     )
     print(report_text_mu)
     print(f"Report written -> {report_path_mu}")
