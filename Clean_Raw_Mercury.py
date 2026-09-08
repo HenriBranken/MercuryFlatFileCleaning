@@ -112,6 +112,12 @@ def blank_out_dash_cells(df: pd.DataFrame) -> pd.DataFrame:
     return df.apply(lambda col: col.mask(col.str.strip() == "-", ""))
 
 
+def replace_icas_with_lyra(df: pd.DataFrame, col: str = "Operation") -> pd.DataFrame:
+    """Replace every case-insensitive occurrence of "icas" in col with "Lyra" (e.g. "ICAS Latina" -> "Lyra Latina")."""
+    df[col] = df[col].str.replace("icas", "Lyra", case=False, regex=True)
+    return df
+
+
 def collapse_duplicate_rows(
     df: pd.DataFrame, ls_cols: list[str], sum_cols: list[str], sort_cols: list[str]
 ) -> pd.DataFrame:
@@ -202,6 +208,8 @@ def clean_de(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     for col in LS_STRING_COLS_DE:
         df[col] = df[col].str.strip().str.replace(r"\s+", " ", regex=True)
 
+    df = replace_icas_with_lyra(df)
+
     for col in LS_INT_COLS_DE:
         df[col] = df[col].replace("", "0").astype(int)
 
@@ -239,6 +247,8 @@ def clean_du(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
 
     for col in LS_STRING_COLS_DU:
         df[col] = df[col].str.strip().str.replace(r"\s+", " ", regex=True)
+
+    df = replace_icas_with_lyra(df)
 
     for col in LS_INT_COLS_DU:
         df[col] = df[col].replace("", "0").astype(int)
@@ -290,6 +300,8 @@ def clean_me(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     for col in LS_STRING_COLS_ME:
         df[col] = df[col].str.strip().str.replace(r"\s+", " ", regex=True)
 
+    df = replace_icas_with_lyra(df)
+
     for col in LS_INT_COLS_ME:
         df[col] = df[col].replace("", "0").astype(int)
 
@@ -330,6 +342,8 @@ def clean_mu(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
 
     for col in LS_STRING_COLS_MU:
         df[col] = df[col].str.strip().str.replace(r"\s+", " ", regex=True)
+
+    df = replace_icas_with_lyra(df)
 
     for col in LS_INT_COLS_MU:
         df[col] = df[col].replace("", "0").astype(int)
