@@ -41,6 +41,16 @@ def sum_numeric_cols(df: pd.DataFrame, sum_cols: list[str]) -> dict[str, int]:
     return {col: int(df[col].sum()) for col in sum_cols}
 
 
+def sum_raw_numeric_cols(df: pd.DataFrame, int_cols: list[str]) -> dict[str, int]:
+    """Return {col: sum} computed on df's original string values, before any cleaning; a bare "-" or blank cell counts as 0."""
+    sums = {}
+    for col in int_cols:
+        stripped = df[col].str.strip()
+        as_int_str = stripped.mask(stripped.isin(["", "-"]), "0")
+        sums[col] = int(as_int_str.astype(int).sum())
+    return sums
+
+
 def write_report(
     reports_dir: Path,
     prefix: str,
@@ -50,6 +60,7 @@ def write_report(
     df_cleaned: pd.DataFrame,
     output_path: Path,
     rows_before_collapse: int,
+    sums_raw: dict[str, int],
     sums_before_collapse: dict[str, int],
     sums_after_collapse: dict[str, int],
 ) -> tuple[Path, str]:
@@ -67,18 +78,19 @@ def write_report(
         f"Cleaned duplicate rows: {int(df_cleaned.duplicated().sum())}",
         f"Output file: {output_path.name}",
         "=======================================================================",
-        "Numeric field sums, before dedup (post blank-drop) vs after dedup:",
+        "Numeric field sums, raw (pre-cleaning) vs before dedup (post blank-drop) vs after dedup:",
     ]
     name_width = max(len(col) for col in sums_before_collapse) + 2
     all_match = True
     for col in sums_before_collapse:
+        raw_sum = sums_raw[col]
         before_sum = sums_before_collapse[col]
         after_sum = sums_after_collapse[col]
-        is_match = before_sum == after_sum
+        is_match = raw_sum == before_sum == after_sum
         all_match = all_match and is_match
         verdict = "MATCH" if is_match else "MISMATCH"
         report_lines.append(
-            f"  {col:<{name_width}}before={str(before_sum):<16}after={str(after_sum):<16}{verdict}"
+            f"  {col:<{name_width}}raw={str(raw_sum):<16}before={str(before_sum):<16}after={str(after_sum):<16}{verdict}"
         )
     report_lines.append(f"All numeric sums match: {all_match}")
     report_text = "\n".join(report_lines) + "\n"
@@ -228,6 +240,8 @@ LS_STRING_COLS_DU = [
 ]
 LS_INT_COLS_DU = ["Sessions", "UniqueUsers"]
 
+RENAME_FN_DU = lambda c: c[:1].upper() + c[1:] if c else c
+
 SORT_COLS_DU = ["Date", "CompanyCode", "CompanyName", "Country", "Operation"]
 
 PREFIX_DU = "MercuryDailyUsers"
@@ -236,7 +250,7 @@ FILENAME_RE_DU = re.compile(r"^MercuryDailyUsers_(\d{4})-(\d{2})-\d{2}\.txt$")
 
 def clean_du(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Clean a raw MercuryDailyUsers dataframe into the final schema."""
-    df = df.rename(columns=lambda c: c[:1].upper() + c[1:] if c else c)
+    df = df.rename(columns=RENAME_FN_DU)
 
     df, dropped_du = drop_blank_and_missing_key_rows(df, LS_COLS_DU, "Date")
 
@@ -364,6 +378,7 @@ def main() -> None:
     month_tag_de = month_tag_from_filename(input_path_de, PREFIX_DE, FILENAME_RE_DE)
 
     df_raw_de = read_semicolon_csv_protecting_backslashes(input_path_de)
+    sums_raw_de = sum_raw_numeric_cols(df_raw_de.rename(columns=RENAME_MAP_DE), LS_INT_COLS_DE)
     df_raw_de = blank_out_dash_cells(df_raw_de)
     df_cleaned_de, dropped_blank_de = clean_de(df_raw_de)
     rows_before_collapse_de = len(df_cleaned_de)
@@ -390,6 +405,7 @@ def main() -> None:
         df_cleaned=df_cleaned_de,
         output_path=output_path_de,
         rows_before_collapse=rows_before_collapse_de,
+        sums_raw=sums_raw_de,
         sums_before_collapse=sums_before_collapse_de,
         sums_after_collapse=sums_after_collapse_de,
     )
@@ -402,6 +418,7 @@ def main() -> None:
     month_tag_du = month_tag_from_filename(input_path_du, PREFIX_DU, FILENAME_RE_DU)
 
     df_raw_du = pd.read_csv(input_path_du, sep=";", dtype=str, keep_default_na=False, encoding="utf-8")
+    sums_raw_du = sum_raw_numeric_cols(df_raw_du.rename(columns=RENAME_FN_DU), LS_INT_COLS_DU)
     df_raw_du = blank_out_dash_cells(df_raw_du)
     df_cleaned_du, dropped_blank_du = clean_du(df_raw_du)
     rows_before_collapse_du = len(df_cleaned_du)
@@ -428,6 +445,7 @@ def main() -> None:
         df_cleaned=df_cleaned_du,
         output_path=output_path_du,
         rows_before_collapse=rows_before_collapse_du,
+        sums_raw=sums_raw_du,
         sums_before_collapse=sums_before_collapse_du,
         sums_after_collapse=sums_after_collapse_du,
     )
@@ -440,6 +458,7 @@ def main() -> None:
     month_tag_me = month_tag_from_filename(input_path_me, PREFIX_ME, FILENAME_RE_ME)
 
     df_raw_me = read_semicolon_csv_protecting_backslashes(input_path_me)
+    sums_raw_me = sum_raw_numeric_cols(df_raw_me.rename(columns=RENAME_MAP_ME), LS_INT_COLS_ME)
     df_raw_me = blank_out_dash_cells(df_raw_me)
     df_cleaned_me, dropped_blank_me = clean_me(df_raw_me)
     rows_before_collapse_me = len(df_cleaned_me)
@@ -466,6 +485,7 @@ def main() -> None:
         df_cleaned=df_cleaned_me,
         output_path=output_path_me,
         rows_before_collapse=rows_before_collapse_me,
+        sums_raw=sums_raw_me,
         sums_before_collapse=sums_before_collapse_me,
         sums_after_collapse=sums_after_collapse_me,
     )
@@ -478,6 +498,7 @@ def main() -> None:
     month_tag_mu = month_tag_from_filename(input_path_mu, PREFIX_MU, FILENAME_RE_MU)
 
     df_raw_mu = pd.read_csv(input_path_mu, sep=";", dtype=str, keep_default_na=False, encoding="utf-8")
+    sums_raw_mu = sum_raw_numeric_cols(df_raw_mu.rename(columns=RENAME_MAP_MU), LS_INT_COLS_MU)
     df_raw_mu = blank_out_dash_cells(df_raw_mu)
     df_cleaned_mu, dropped_blank_mu = clean_mu(df_raw_mu)
     rows_before_collapse_mu = len(df_cleaned_mu)
@@ -504,6 +525,7 @@ def main() -> None:
         df_cleaned=df_cleaned_mu,
         output_path=output_path_mu,
         rows_before_collapse=rows_before_collapse_mu,
+        sums_raw=sums_raw_mu,
         sums_before_collapse=sums_before_collapse_mu,
         sums_after_collapse=sums_after_collapse_mu,
     )
