@@ -51,6 +51,23 @@ def sum_raw_numeric_cols(df: pd.DataFrame, int_cols: list[str]) -> dict[str, int
     return sums
 
 
+def column_level_stats(df: pd.DataFrame) -> list[str]:
+    """Return 'Column-level stats for cleaned output' report lines: Count, CountDistinct, and MissingValueCount per column."""
+    cols = list(df.columns)
+    name_width = max(len(c) for c in cols) + 2
+    lines = [
+        "Column-level stats for cleaned output:",
+        f"  {'Column':<{name_width}}{'Count':<7}{'CountDistinct':<15}{'MissingValueCount'}",
+    ]
+    for col in cols:
+        is_missing = df[col].astype(str) == ""
+        missing = int(is_missing.sum())
+        count = len(df) - missing
+        distinct = int(df.loc[~is_missing, col].nunique())
+        lines.append(f"  {col:<{name_width}}{str(count):<7}{str(distinct):<15}{missing}")
+    return lines
+
+
 def write_report(
     reports_dir: Path,
     prefix: str,
@@ -93,8 +110,9 @@ def write_report(
             f"  {col:<{name_width}}raw={str(raw_sum):<16}before={str(before_sum):<16}after={str(after_sum):<16}{verdict}"
         )
     report_lines.append(f"All numeric sums match: {all_match}")
+    report_lines.append("")
+    report_lines.extend(column_level_stats(df_cleaned))
     report_text = "\n".join(report_lines) + "\n"
-    report_text += "\n\n\n" + df_cleaned.describe().to_string() + "\n"
 
     reports_dir.mkdir(parents=True, exist_ok=True)
     report_path = reports_dir / f"{prefix}_{month_tag}_report.txt"
